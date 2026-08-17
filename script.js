@@ -24,12 +24,12 @@ function previousScreen(currentScreen) {
 }
 
 function goToStart() {
-    showScreen(1);
+    showScreen(0);
 }
 
 // Celebration with confetti
 function celebrate() {
-    showScreen(5);
+    showScreen(6);
     createConfetti();
 }
 
@@ -82,9 +82,9 @@ document.addEventListener('keydown', (e) => {
     const screenNumber = parseInt(screenId?.replace('screen', '')) || 0;
 
     if (e.key === 'ArrowRight') {
-        if (screenNumber < 5) nextScreen(screenNumber);
+        if (screenNumber < 6) nextScreen(screenNumber);
     } else if (e.key === 'ArrowLeft') {
-        if (screenNumber > 1) previousScreen(screenNumber);
+        if (screenNumber > 0) previousScreen(screenNumber);
     }
 });
 
@@ -108,18 +108,18 @@ function handleSwipe() {
 
     if (touchStartX - touchEndX > 50) {
         // Swiped left - go next
-        if (screenNumber < 5) nextScreen(screenNumber);
+        if (screenNumber < 6) nextScreen(screenNumber);
     } else if (touchEndX - touchStartX > 50) {
         // Swiped right - go back
-        if (screenNumber > 1) previousScreen(screenNumber);
+        if (screenNumber > 0) previousScreen(screenNumber);
     }
 }
 
 // Initialize
 window.addEventListener('load', () => {
-    showScreen(1);
+    showScreen(0);
 });
 
 // Add some nice touches
-console.log('%c💕 I\'m Sorry Website 💕', 'font-size: 20px; color: #ff6b9d; font-weight: bold;');
+console.log('%c💕 I\'m Sorry Website - For Bouchra 💕', 'font-size: 20px; color: #ff6b9d; font-weight: bold;');
 console.log('%cMade with love to apologize ❤️', 'font-size: 14px; color: #667eea;');
