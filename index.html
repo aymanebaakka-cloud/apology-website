@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sincere and romantic apology website">
+    <title>I'm Sorry ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Animated background -->
+        <div class="background-animation">
+            <div class="floating-heart" style="--duration: 6s; --delay: 0s; --left: 10%;">❤️</div>
+            <div class="floating-heart" style="--duration: 7s; --delay: 1s; --left: 20%;">💕</div>
+            <div class="floating-heart" style="--duration: 8s; --delay: 2s; --left: 30%;">❤️</div>
+            <div class="floating-heart" style="--duration: 6.5s; --delay: 0.5s; --left: 40%;">💔</div>
+            <div class="floating-heart" style="--duration: 7.5s; --delay: 1.5s; --left: 50%;">❤️</div>
+            <div class="floating-heart" style="--duration: 8.5s; --delay: 2.5s; --left: 60%;">💕</div>
+            <div class="floating-heart" style="--duration: 6s; --delay: 0.3s; --left: 70%;">❤️</div>
+            <div class="floating-heart" style="--duration: 7s; --delay: 1.3s; --left: 80%;">💔</div>
+            <div class="floating-heart" style="--duration: 8s; --delay: 2.3s; --left: 90%;">❤️</div>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+            <!-- Screen 1: Initial Apology -->
+            <div class="screen active" id="screen1">
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-large animate-bounce">💔</div>
+                    </div>
+                    <h1 class="title fade-in-1">I Messed Up</h1>
+                    <p class="subtitle fade-in-2">
+                        I'm sorry for disappearing and not talking to you.
+                    </p>
+                    <p class="text fade-in-3">
+                        I hurt someone I deeply care about, and I can't stop thinking about it. These days without you have been the hardest.
+                    </p>
+                    <button class="btn btn-primary fade-in-4" onclick="nextScreen(1)">
+                        <span>Let me explain...</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Screen 2: Explanation -->
+            <div class="screen" id="screen2">
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-large animate-rotate">💭</div>
+                    </div>
+                    <h2 class="title fade-in-1">What I've Been Thinking</h2>
+                    <p class="text fade-in-2">
+                        These past days, all I think about is you and how much I miss talking to you. Every moment I realize how important you are to me.
+                    </p>
+                    <p class="text fade-in-3">
+                        I was wrong to shut you out. You didn't deserve that. You deserve someone who communicates, who shows up, and who never takes you for granted.
+                    </p>
+                    <p class="text fade-in-4">
+                        I want to be that person for you. I want to be better.
+                    </p>
+                    <div class="button-group fade-in-5">
+                        <button class="btn btn-secondary" onclick="previousScreen(2)">
+                            ← Back
+                        </button>
+                        <button class="btn btn-primary" onclick="nextScreen(2)">
+                            <span>I'm listening</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 3: Feelings -->
+            <div class="screen" id="screen3">
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-large animate-pulse">💕</div>
+                    </div>
+                    <h2 class="title fade-in-1">How I Feel About You</h2>
+                    <p class="text fade-in-2">
+                        You are someone special. You bring light into my life that I didn't even know I was missing.
+                    </p>
+                    <p class="text fade-in-3">
+                        Losing you, even for just these few days, made me realize how much you mean to me. How much I need you. How much I love you.
+                    </p>
+                    <p class="text fade-in-4">
+                        I promise to never hurt you like this again. I promise to communicate, to listen, and to always show up for you.
+                    </p>
+                    <div class="button-group fade-in-5">
+                        <button class="btn btn-secondary" onclick="previousScreen(3)">
+                            ← Back
+                        </button>
+                        <button class="btn btn-primary" onclick="nextScreen(3)">
+                            <span>I'm Ready</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 4: Final Message -->
+            <div class="screen" id="screen4">
+                <div class="card final-card">
+                    <div class="heart-burst">
+                        <div class="heart-center animate-heart-beat">❤️</div>
+                        <div class="heart-bg heart-1">💕</div>
+                        <div class="heart-bg heart-2">❤️</div>
+                        <div class="heart-bg heart-3">💕</div>
+                        <div class="heart-bg heart-4">❤️</div>
+                    </div>
+                    <h1 class="title final-title fade-in-1">I'm Sorry</h1>
+                    <p class="text final-text fade-in-2">
+                        Thank you for listening and for giving me another chance.
+                    </p>
+                    <p class="text final-text fade-in-3">
+                        I promise to do better and to never hurt you like this again.
+                    </p>
+                    <p class="emphasis fade-in-4">You mean everything to me.</p>
+                    <div class="button-group fade-in-5">
+                        <button class="btn btn-secondary" onclick="previousScreen(4)">
+                            ← Back
+                        </button>
+                        <button class="btn btn-primary btn-accept" onclick="celebrate()">
+                            <span>❤️ Accept My Apology</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 5: Celebration -->
+            <div class="screen" id="screen5">
+                <div class="card celebration-card">
+                    <div class="confetti-container" id="confetti"></div>
+                    <div class="heart-burst large">
+                        <div class="heart-center animate-heart-beat">❤️</div>
+                        <div class="heart-bg heart-1">💕</div>
+                        <div class="heart-bg heart-2">❤️</div>
+                        <div class="heart-bg heart-3">💕</div>
+                        <div class="heart-bg heart-4">❤️</div>
+                    </div>
+                    <h1 class="title celebration-title fade-in-1">Thank You! 💕</h1>
+                    <p class="text fade-in-2">
+                        This means the world to me. I love you.
+                    </p>
+                    <p class="text fade-in-3">
+                        I will spend every day making sure you never regret giving me another chance.
+                    </p>
+                    <div class="button-group fade-in-4">
+                        <button class="btn btn-secondary" onclick="goToStart()">
+                            ← Start Over
+                        </button>
+                        <button class="btn btn-light" onclick="copyLink()">
+                            📋 Copy Link
+                        </button>
+                    </div>
+                    <p class="small-text fade-in-5" id="copyMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
