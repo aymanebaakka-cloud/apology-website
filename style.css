@@ -133,6 +133,60 @@ body {
     display: inline-block;
 }
 
+/* Personal Info Card */
+.welcome-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(254, 202, 87, 0.08));
+}
+
+.personal-info {
+    background: linear-gradient(135deg, #ffe0ed, #fff5e1);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.15);
+}
+
+.info-box {
+    margin: 15px 0;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), #ff8fab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 5px;
+}
+
+.info-detail {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    margin: 20px auto;
+}
+
+/* Birthday Card */
+.birthday-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(254, 202, 87, 0.1));
+}
+
 /* Typography */
 .title {
     font-size: 2.5rem;
@@ -469,6 +523,14 @@ body {
         font-size: 5rem;
     }
 
+    .personal-info {
+        padding: 25px;
+    }
+
+    .info-value {
+        font-size: 1.5rem;
+    }
+
     .btn {
         padding: 12px 30px;
         font-size: 0.9rem;
@@ -542,6 +604,23 @@ body {
     .button-group {
         margin-top: 20px;
     }
+
+    .personal-info {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .info-label {
+        font-size: 0.8rem;
+    }
+
+    .info-value {
+        font-size: 1.4rem;
+    }
+
+    .info-detail {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -556,5 +635,9 @@ body {
     .btn {
         padding: 10px 20px;
         font-size: 0.8rem;
+    }
+
+    .info-value {
+        font-size: 1.2rem;
     }
 }
