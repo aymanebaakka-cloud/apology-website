@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A sincere and romantic apology website">
-    <title>I'm Sorry ❤️</title>
+    <meta name="description" content="A sincere and romantic apology website for Bouchra">
+    <title>I'm Sorry, Bouchra ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,23 +24,58 @@
 
         <!-- Main content -->
         <div class="content">
+            <!-- Screen 0: Welcome with Personal Info -->
+            <div class="screen active" id="screen0">
+                <div class="card welcome-card">
+                    <div class="card-top">
+                        <div class="emoji-large animate-pulse">💝</div>
+                    </div>
+                    <h1 class="title fade-in-1">A little about you ❤️</h1>
+                    <div class="personal-info fade-in-2">
+                        <div class="info-box">
+                            <p class="info-label">Your Beautiful Name</p>
+                            <p class="info-value">Bouchra</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="info-box">
+                            <p class="info-label">Your Special Birthday</p>
+                            <p class="info-value">27/06/2007</p>
+                            <p class="info-detail">You're a Cancer ♋</p>
+                        </div>
+                    </div>
+                    <p class="text fade-in-3">
+                        This website is made specifically for you, Bouchra. 
+                        Every word on this journey is a promise to you.
+                    </p>
+                    <button class="btn btn-primary fade-in-4" onclick="nextScreen(0)">
+                        <span>Let's begin...</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
             <!-- Screen 1: Initial Apology -->
-            <div class="screen active" id="screen1">
+            <div class="screen" id="screen1">
                 <div class="card">
                     <div class="card-top">
                         <div class="emoji-large animate-bounce">💔</div>
                     </div>
-                    <h1 class="title fade-in-1">I Messed Up</h1>
+                    <h1 class="title fade-in-1">Bouchra, I Messed Up</h1>
                     <p class="subtitle fade-in-2">
                         I'm sorry for disappearing and not talking to you.
                     </p>
                     <p class="text fade-in-3">
                         I hurt someone I deeply care about, and I can't stop thinking about it. These days without you have been the hardest.
                     </p>
-                    <button class="btn btn-primary fade-in-4" onclick="nextScreen(1)">
-                        <span>Let me explain...</span>
-                        <span class="btn-arrow">→</span>
-                    </button>
+                    <div class="button-group fade-in-4">
+                        <button class="btn btn-secondary" onclick="previousScreen(1)">
+                            ← Back
+                        </button>
+                        <button class="btn btn-primary" onclick="nextScreen(1)">
+                            <span>Let me explain...</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -80,7 +115,7 @@
                     </div>
                     <h2 class="title fade-in-1">How I Feel About You</h2>
                     <p class="text fade-in-2">
-                        You are someone special. You bring light into my life that I didn't even know I was missing.
+                        Bouchra, you are someone special. You bring light into my life that I didn't even know I was missing.
                     </p>
                     <p class="text fade-in-3">
                         Losing you, even for just these few days, made me realize how much you mean to me. How much I need you. How much I love you.
@@ -100,8 +135,36 @@
                 </div>
             </div>
 
-            <!-- Screen 4: Final Message -->
+            <!-- Screen 4: Birthday Message -->
             <div class="screen" id="screen4">
+                <div class="card birthday-card">
+                    <div class="card-top">
+                        <div class="emoji-large animate-bounce">🎂</div>
+                    </div>
+                    <h2 class="title fade-in-1">A Message for You</h2>
+                    <p class="text fade-in-2">
+                        Bouchra, you were born on 27th June 2007 – a day that brought such an amazing person into this world.
+                    </p>
+                    <p class="text fade-in-3">
+                        Every day with you is like a celebration. You bring joy, warmth, and love into my life in ways I never expected.
+                    </p>
+                    <p class="text fade-in-4">
+                        You deserve to be celebrated, cherished, and loved every single day. I'm sorry for making you feel anything less than incredible.
+                    </p>
+                    <div class="button-group fade-in-5">
+                        <button class="btn btn-secondary" onclick="previousScreen(4)">
+                            ← Back
+                        </button>
+                        <button class="btn btn-primary" onclick="nextScreen(4)">
+                            <span>Continue</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 5: Final Message -->
+            <div class="screen" id="screen5">
                 <div class="card final-card">
                     <div class="heart-burst">
                         <div class="heart-center animate-heart-beat">❤️</div>
@@ -110,7 +173,7 @@
                         <div class="heart-bg heart-3">💕</div>
                         <div class="heart-bg heart-4">❤️</div>
                     </div>
-                    <h1 class="title final-title fade-in-1">I'm Sorry</h1>
+                    <h1 class="title final-title fade-in-1">Bouchra, I'm Sorry</h1>
                     <p class="text final-text fade-in-2">
                         Thank you for listening and for giving me another chance.
                     </p>
@@ -119,7 +182,7 @@
                     </p>
                     <p class="emphasis fade-in-4">You mean everything to me.</p>
                     <div class="button-group fade-in-5">
-                        <button class="btn btn-secondary" onclick="previousScreen(4)">
+                        <button class="btn btn-secondary" onclick="previousScreen(5)">
                             ← Back
                         </button>
                         <button class="btn btn-primary btn-accept" onclick="celebrate()">
@@ -129,8 +192,8 @@
                 </div>
             </div>
 
-            <!-- Screen 5: Celebration -->
-            <div class="screen" id="screen5">
+            <!-- Screen 6: Celebration -->
+            <div class="screen" id="screen6">
                 <div class="card celebration-card">
                     <div class="confetti-container" id="confetti"></div>
                     <div class="heart-burst large">
@@ -140,7 +203,7 @@
                         <div class="heart-bg heart-3">💕</div>
                         <div class="heart-bg heart-4">❤️</div>
                     </div>
-                    <h1 class="title celebration-title fade-in-1">Thank You! 💕</h1>
+                    <h1 class="title celebration-title fade-in-1">Thank You, Bouchra! 💕</h1>
                     <p class="text fade-in-2">
                         This means the world to me. I love you.
                     </p>
